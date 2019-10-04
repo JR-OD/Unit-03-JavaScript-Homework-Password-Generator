@@ -12,20 +12,26 @@
   </head>
   <body>
     <section>
-      <header>
-          <h1>Password Generator</h1>
-      </header>
-      <div class="container">
-          <h2>Generate a Password</h2>
-          <hr>
-          <textarea readonly id="password" placeholder="Your Secure Password" min="8" max="128"></textarea>
-          <hr>
-          <button onclick=genesis() id="generate">
-              Generate Password
-          </button>
-          <button onclick="clipboard" id="copy">
-              Copy to Clipboard
-          </button>
+      <div class="Row">
+          <div class="col-lg-8 col-sm-12 mx-auto">
+            <div class="content">  
+              <header>
+                <h1>Password Generator</h1>
+              </header>
+              <div class="container">
+                <h2>Generate a Password</h2>
+                <hr>
+                <textarea readonly id="password" placeholder="Your Secure Password" min="8" max="128"></textarea>
+                <hr>
+                <button onclick="genesis()" id="generate">
+                    Generate Password
+                </button>
+                <button onclick="clipboard()" id="copy">
+                    Copy to Clipboard
+                </button>
+              </div>
+            </div>  
+          </div>
       </div> 
     </section>
   </body>
