@@ -1,18 +1,32 @@
 body {
-    margin: 0 auto;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+    background-color: rgb(238, 248, 252);
 }
 
-.row {
+section {
+    max-width: 768px;
+    height: 100%;
+    margin-top: 10px;
     margin: 0 auto;
-    background-color: rgb(127, 189, 189);
 }
+
 h1 {
     text-align: center;
+    padding-bottom: 70px;
+    text-emphasis: bold;
+}
+
+h2 {
+    padding-top: 50px;
+    text-emphasis: bold;
 }
 
 .container {
+    max-width: 750px;
     background-color: white;
+    border-radius: 5px;
+    padding-bottom: 100px;
 }
 
 #password {
@@ -26,21 +40,21 @@ h1 {
 }
 
 #generate {
-    width: 40%;
+    width: 30%;
     background-color: brown;
     color: white;
     border-radius: 25px;
     float: left;
     padding: 10px 0 10px 0;
-    size: 24px;
+    size: 34px;
 }
 
 #copy {
-    width: 40%;
+    width: 30%;
     background-color: gray;
     color: white;
     border-radius: 25px;
     float: right;
     padding: 10px 0 10px 0;
-    size: 24px!important;
+    size: 34px;
 }

@@ -9,18 +9,20 @@ var randomPassword = document.getElementById("password")
 // user imput:
 
 
-generate.addEventListener("click",function(){
+generate.addEventListener("click",genesis)
+
+function genesis() {
 
     var size = prompt ("Please choose a pasword length between 8 and 128 characters:");
 
     var type =
     confirm("Special characters") ? type += special: '';
-    confirm("Numeric characters") ? type =+ numeric: '';
-    confirm("lowercase characters") ? type =+ lowercase: '';
-    confirm("Uppercase characters") ? type =+ uppercase: '';
+    confirm("Numeric characters") ? type += numeric: '';
+    confirm("lowercase characters") ? type += lowercase: '';
+    confirm("Uppercase characters") ? type += uppercase: '';
 
-    randomPassword.value = password(size.value, type);
-});
+    randomPassword.value = password(size, type);
+};
 
 console.log(password)
 
