@@ -1,0 +1,46 @@
+body {
+    margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.row {
+    margin: 0 auto;
+    background-color: rgb(127, 189, 189);
+}
+h1 {
+    text-align: center;
+}
+
+.container {
+    background-color: white;
+}
+
+#password {
+    width: 100%;
+    color: gray;
+    border-style: dashed;
+    border-radius: 5px;
+    height: 150px;
+    text-align: center;
+    padding: 10px;
+}
+
+#generate {
+    width: 40%;
+    background-color: brown;
+    color: white;
+    border-radius: 25px;
+    float: left;
+    padding: 10px 0 10px 0;
+    size: 24px;
+}
+
+#copy {
+    width: 40%;
+    background-color: gray;
+    color: white;
+    border-radius: 25px;
+    float: right;
+    padding: 10px 0 10px 0;
+    size: 24px!important;
+}

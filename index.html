@@ -12,16 +12,16 @@
   </head>
   <body>
     <div class="Row">
-        <div class=""col-lg-8 col-sm-12">
+        <div class="col-lg-8 col-sm-12">
             <header>
                 <h1>Password Generator</h1>
             </header>
             <div class="container">
                 <h2>Generate a Password</h2>
                 <hr>
-                <textarea readonly id="password" placeholder="Your Secure Password"></textarea>
+                <textarea readonly id="password" placeholder="Your Secure Password" min="8" max="128"></textarea>
                 <hr>
-                <button onclick="genesis()" id="generate">
+                <button onclick="generate()" id="generate">
                     Generate Password
                 </button>
                 <button onclick="clipboard" id="copy">
@@ -32,5 +32,7 @@
     </div> 
     
   </body>
-  <script src="sript.js"></script>
+  
+  <script src="script.js"></script>
+  
 </html>

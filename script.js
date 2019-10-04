@@ -1,44 +1,47 @@
+// variables: 
+var special = ("~,!,@,#,$,%,^,&,*,-,+,?,");
+var numeric = ("0,1,2,3,4,5,6,7,8,9");
+var lowercase = ("a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,x,y,z");
+var uppercase = ("A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,X,Y,Z");
+var generate = document.getElementById("generate")
+var randomPassword = document.getElementById("password")
 
-function genesis(){
+// user imput:
 
-    // user imput 
 
-    var size = prompt (Please choose a pasword length between 8 and 128 characters:);
+generate.addEventListener("click",function(){
 
-    var special = ("~,!,@,#,$,%,^,&,*,-,+,?,");
-    var numeric = ("0,1,2,3,4,5,6,7,8,9");
-    var lowercase = ("a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,x,y,z");
-    var uppercase = ("A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,X,Y,Z");
+    var size = prompt ("Please choose a pasword length between 8 and 128 characters:");
 
-    var character = [special, numeric, lowercase, uppercase]
+    var type =
+    confirm("Special characters") ? type += special: '';
+    confirm("Numeric characters") ? type =+ numeric: '';
+    confirm("lowercase characters") ? type =+ lowercase: '';
+    confirm("Uppercase characters") ? type =+ uppercase: '';
 
-    var type = prompt (imput any combination of character type 0:special, 1:numeric, 2:lowercase, 3:uppercase, divide by comas);
+    randomPassword.value = password(size.value, type);
+});
 
-    console.log(type);
+console.log(password)
 
-    // how to concatenate "type"?
+// pasword generation
 
-    // pasword generation
+function password(size,type){
+    var psswrd = '';
 
-    for(var 1=0; i<= size; i++){
-    password + password+ type.charAt(Math.random() * Math.floor(type.length-1));
+    for(var i=0; i<size; i++) {
+        psswrd += type.charAt(Math.floor(Math.random() * type.length));
     }
-    
-    // display
-    document.getElementById("generate").value = password;
+    return psswrd;
 
+    console.log(psswrd)
 }
 
 // clipboard
 
-function.clipboard(){
-    document.getElementById("generate");
+// function.clipboard() {
+//     document.getElementById("generate");
 
-    document.execCommand("Copy");
+//     document.execCommand("Copy");
 
-    alert(password copied);
-}
-
-
-
-
+//     alert(password copied); //
